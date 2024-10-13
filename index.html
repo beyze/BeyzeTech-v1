@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeyzeTech v1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        /* Tambahkan animasi untuk gambar */
+        .img-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .img-hover-effect:hover {
+            transform: scale(1.05); /* Memperbesar gambar */
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-roboto">
+    <!-- Header / Navbar -->
+    <header class="bg-white py-4 shadow">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img alt="Sekilas IT logo" class="h-12 w-12" src="img/channels4_profile.jpg" />
+                <div class="ml-4">
+                    <h1 class="text-2xl font-bold">BeyzeTech v1</h1>
+                    <p class="text-gray-600">Media Informasi Teknologi Terkini</p>
+                </div>
+            </div>
+            <!-- Navbar -->
+            <nav id="navbar" class="hidden md:flex space-x-6">
+                <a class="text-gray-700 hover:text-gray-900 transition-colors" href="index.html">Update Terkini</a>
+                <a class="text-gray-700 hover:text-gray-900 transition-colors" href="https://link-ke-hubungi-kami.com">Hubungi Kami</a>
+            </nav>
+            <!-- Hamburger Menu -->
+            <button id="menu-btn" class="block md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <a class="block text-gray-700 hover:text-gray-900 py-2 px-4" href="https://link-ke-update-terkini.com">Update Terkini</a>
+            <a class="block text-gray-700 hover:text-gray-900 py-2 px-4" href="https://link-ke-review-video.com">Review Video</a>
+            <a class="block text-gray-700 hover:text-gray-900 py-2 px-4" href="https://link-ke-tentang-sekilas-it.com">Tentang Sekilas IT</a>
+            <a class="block text-gray-700 hover:text-gray-900 py-2 px-4" href="https://link-ke-hubungi-kami.com">Hubungi Kami</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Article 1 -->
+            <div class="bg-white shadow rounded overflow-hidden">
+                <a href="https://link-ke-halaman-1.com">
+                    <img alt="AMD Radeon Pro V710" class="w-full h-48 object-cover img-hover-effect" src="https://storage.googleapis.com/a1aa/image/L6ygiR47E96IOZ23ZfCFq0WkEgrHFjDxFs6Jc4CEyK4y2FzJA.jpg" />
+                </a>
+                <div class="p-4">
+                    <p class="text-sm text-gray-500">BERITA TERKINI | KARTU GRAFIS</p>
+                    <h2 class="text-xl font-bold mt-2">AMD Radeon Pro V710: GPU Eksklusif Cloud dengan VRAM 32GB</h2>
+                </div>
+            </div>
+            <!-- Article 2 -->
+            <div class="bg-white shadow rounded overflow-hidden">
+                <a href="https://link-ke-halaman-2.com">
+                    <img alt="Intel Core Ultra 9 285K" class="w-full h-48 object-cover img-hover-effect" src="https://storage.googleapis.com/a1aa/image/CvjVkha8YCa2EBUg38yH4EUBMvnJVPtm195lSm4IiT7Y7i5E.jpg" />
+                </a>
+                <div class="p-4">
+                    <p class="text-sm text-gray-500">BERITA TERKINI | PROSESOR</p>
+                    <h2 class="text-xl font-bold mt-2">Bocoran Performa Intel Core Ultra 9 285K: Makin Beringas</h2>
+                </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="bg-white shadow rounded overflow-hidden">
+                <a href="https://link-ke-halaman-3.com">
+                    <img alt="MSI Umumkan Gaming Gear S.T.A.L.K.E.R. 2" class="w-full h-48 object-cover img-hover-effect" src="https://storage.googleapis.com/a1aa/image/Z1oKxHUtXgrQFFuo1UyKGqusT76xJpcCauaZ53IQy9IZ7i5E.jpg" />
+                </a>
+                <div class="p-4">
+                    <p class="text-sm text-gray-500">BERITA TERKINI | GAMING</p>
+                    <h2 class="text-xl font-bold mt-2">MSI Umumkan Gaming Gear S.T.A.L.K.E.R. 2 Limited Edition</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
